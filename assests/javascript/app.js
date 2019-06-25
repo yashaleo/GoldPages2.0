@@ -2,39 +2,43 @@
 $(".md-form").hide();
 
 // When restaurant button is clicked, zip code box reappears.
-var restaurantClicked = $(document).on("click", ".restaurant", function() {
+var restaurantClicked = $(document).on("click", ".restaurant", function () {
   console.log("restaurant button was clicked");
-  $(".md-form").show();
+  $(".restaurant").addClass('animated tada')
+  // $(".md-form").show();
 });
 
 // When hotels button is clicked, zip code box reappears.
-var hotelClicked = $(document).on("click", ".hotel", function() {
+var hotelClicked = $(document).on("click", ".hotel", function () {
   console.log("hotels button was clicked");
-  $(".md-form").show();
+  $(".hotel").addClass('animated tada')
+  // $(".md-form").show();
 });
 
 // When attractions button is clicked, zip code box reappears.
-var attractionsClicked = $(document).on("click", ".attractions", function() {
+var attractionsClicked = $(document).on("click", ".attractions", function () {
   console.log("attractions button was clicked");
-  $(".md-form").show();
+  $(".attractions").addClass('animated tada')
+  // $(".md-form").show();
 });
 
 // When all button is clicked,  zip code box reappears.
-var allClicked = $(document).on("click", ".all", function() {
+var allClicked = $(document).on("click", ".all", function () {
   console.log("all button was clicked");
-  $(".md-form").show();
+  $(".all").addClass('animated tada')
+  // $(".md-form").show();
 });
 
 // Submit Button
-$(document).on("click", ".btn", function() {
-  console.log("submit button clicked");
-});
+// $(document).on("click", ".btn", function () {
+//   console.log("submit button clicked");
+// });
 
 var map = null;
 
 function initMap() {
   var location = new Object();
-  navigator.geolocation.getCurrentPosition(function(pos) {
+  navigator.geolocation.getCurrentPosition(function (pos) {
     location.lat = pos.coords.latitude;
     location.long = pos.coords.longitude;
     map = new google.maps.Map(document.getElementById("map"), {
@@ -84,7 +88,7 @@ function callback(results, status) {
 }
 
 function bindInfoWindow(marker, map, infowindow, html) {
-  marker.addListener("click", function() {
+  marker.addListener("click", function () {
     infowindow.setContent(html);
     infowindow.open(map, this);
   });
