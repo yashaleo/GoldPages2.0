@@ -1,54 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <!-- Link to CSS-->
-    <link rel="stylesheet" href="assests/css/style.css" />
-    <title>Gold Pages 2.0</title>
-    <title>My Google Map</title>
-    <style>
-      #map {
-        height: 600px;
-        width: 60%;
-      }
-      .container {
-        background: white;
-        padding: 0;
-        margin: -600px auto;
-        width: 550px;
-        height: 600px;
-        position: relative;
-        box-shadow: 5px 5px 5px black;
-        border: solid 1px black;
-        margin-left: 950px;
-      }
-    </style>
-  </head>
-  <body>
-    <nav class="navbar navbar-light bg-light mt-4">
-      <a class="navbar-brand mx-auto" href="index.html">
-        <img
-        src="assests/images/goldpages-sansserif.png"
-          width="250"
-          height="200"
-          class="logo d-inline-block"
-          alt=""
-        />
-      </a>
-    </nav>
-    <br />
 
-    <div id="map" class="mx-auto"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <!-- Link to CSS-->
+  <link rel="stylesheet" href="assests/css/style.css" />
+  <title>Gold Pages 2.0</title>
+  <title>My Google Map</title>
+  <style>
+    #map {
+      height: 600px;
+      width: 60%;
+    }
 
-    <!-- <div class="container  rounded pt-1 pt-2 ">
+    .container {
+      background: white;
+      padding: 0;
+      margin: -600px auto;
+      width: 550px;
+      height: 600px;
+      position: relative;
+      box-shadow: 5px 5px 5px black;
+      border: solid 1px black;
+      margin-left: 950px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-light bg-light mt-4">
+    <a class="navbar-brand mx-auto" href="index.html">
+      <img src="assests/images/goldpages-sansserif.png" width="250" height="200" class="logo d-inline-block" alt="" />
+    </a>
+  </nav>
+  <br />
+
+  <div id="map" class="mx-auto"></div>
+
+  <!-- <div class="container  rounded pt-1 pt-2 ">
       <h3>(list of places)</h3>
     <!-- Closing div for container-->
   </div>
@@ -65,10 +58,8 @@
 
   <!-- JS -->
   <script src="assests/javascript/hotel.js"></script>
-    <script
-      async
-      defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHGfJYry-spTdOv8e4JPoL_c1CO0hkoG0&callback=initMap&libraries=places"
-    ></script>
-  </body>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=KEY GOES HERE&callback=initMap&libraries=places"></script>
+</body>
+
 </html>
