@@ -1,31 +1,31 @@
 // Hiding zip code form and submit button.
-$(".md-form").hide();
+// $(".md-form").hide();
 
 // When restaurant button is clicked, zip code box reappears.
-var restaurantClicked = $(document).on("click", ".restaurant", function () {
+var restaurantClicked = $(document).on("click", ".restaurant", function() {
   console.log("restaurant button was clicked");
-  $(".restaurant").addClass('animated tada')
+  $(".restaurant").addClass("animated tada");
   // $(".md-form").show();
 });
 
 // When hotels button is clicked, zip code box reappears.
-var hotelClicked = $(document).on("click", ".hotel", function () {
+var hotelClicked = $(document).on("click", ".hotel", function() {
   console.log("hotels button was clicked");
-  $(".hotel").addClass('animated tada')
+  $(".hotel").addClass("animated tada");
   // $(".md-form").show();
 });
 
 // When attractions button is clicked, zip code box reappears.
-var attractionsClicked = $(document).on("click", ".attractions", function () {
+var attractionsClicked = $(document).on("click", ".attractions", function() {
   console.log("attractions button was clicked");
-  $(".attractions").addClass('animated tada')
+  $(".attractions").addClass("animated tada");
   // $(".md-form").show();
 });
 
 // When all button is clicked,  zip code box reappears.
-var allClicked = $(document).on("click", ".all", function () {
+var allClicked = $(document).on("click", ".all", function() {
   console.log("all button was clicked");
-  $(".all").addClass('animated tada')
+  $(".all").addClass("animated tada");
   // $(".md-form").show();
 });
 
@@ -38,7 +38,7 @@ var map = null;
 
 function initMap() {
   var location = new Object();
-  navigator.geolocation.getCurrentPosition(function (pos) {
+  navigator.geolocation.getCurrentPosition(function(pos) {
     location.lat = pos.coords.latitude;
     location.long = pos.coords.longitude;
     map = new google.maps.Map(document.getElementById("map"), {
@@ -56,7 +56,7 @@ function getRestaurants(location) {
     radius: "1500",
     type: ["restaurant"]
   };
-  service = new google.maps.places.PlaceService(map);
+  service = new google.maps.places.PlacesService(map);
   service.nearbySearch(request, callback);
 }
 
@@ -65,7 +65,7 @@ function callback(results, status) {
     for (var i = 0; i < results.length; i++) {
       console.log(results);
       var place = results[i];
-      var price = createPriace(place.price_level);
+      var price = createPrice(place.price_level);
       var content = `<h3>${place.name}</h3>
             <h4>${place.vicinity}</h4>
             <p>Prices:${price}</br>
@@ -88,7 +88,7 @@ function callback(results, status) {
 }
 
 function bindInfoWindow(marker, map, infowindow, html) {
-  marker.addListener("click", function () {
+  marker.addListener("click", function() {
     infowindow.setContent(html);
     infowindow.open(map, this);
   });
@@ -105,5 +105,3 @@ function createPrice(level) {
     return "?";
   }
 }
-
-
