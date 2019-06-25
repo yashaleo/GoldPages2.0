@@ -1,0 +1,57 @@
+* {
+    font-family: Verdana, Geneva, sans-serif; 
+}
+
+.container {
+    height: 100%;
+}
+
+.form-container {
+    background-color:white;
+    width: 500px;
+    box-shadow: 5px 5px 5px black;
+    border: solid 1px black;
+    position: fixed;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+.logo {
+    margin-top: -60px;
+}
+
+.md-form {
+    margin-top: 50px;
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+body {
+    background-image: url("../images/map.jpg");
+    background-size: cover;
+    height: 100%;
+    margin: auto;
+}
+
+nav {
+    height: 100px;
+    
+}
+
+.icons {
+
+border: #d3aa64;
+border-width: 2px;
+border-style: solid;
+}
+
+.btn {
+    background-color: #d3aa64;
+}
+
+
+
