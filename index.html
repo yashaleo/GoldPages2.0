@@ -1,88 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- Link to CSS-->
+    <link rel="stylesheet" href="assests/css/style.css" />
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-  <!-- Link to CSS-->
-  <link rel="stylesheet" href="assests/css/style.css" />
+    <!-- Link to animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
 
-  <!-- Link to animate.css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+    <style>
+      @import url(http://weloveiconfonts.com/api/?family=entypo);
 
-  <title>Gold Pages 2.0</title>
-</head>
+      #wrapper {
+        width: 350px;
+        height: 50px;
+        margin: 50px;
+        margin-top: -30px;
+        margin-left: 630px;
+    }
+    .box {
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        border: 1px solid#f6e6e6c2;
+        font-family: entypo;
+        color: #212121;
+        background:#f6e6e6c2;
+        line-height: 50px;
+        text-align: center;
+        font-size: 25px;
+        display: inline-block;
+        cursor: pointer;
+        /* margin: 10px; */
+        transition: .5s;
+    }
 
-<body>
-  <!-- Weather -->
-  <div class="city"></div>
-  <div class="temp"></div>
+      .box:hover {
+        color: #fff;
+        transform: scale(1.15);
+        transition: 1s;
+      }
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-light bg-light mt-4">
-    <a class="navbar-brand mx-auto" href="index.html">
-      <img src="assests/images/goldpages-sansserif.png" width="250" height="200" class="logo d-inline-block" alt="" />
-    </a>
-  </nav>
-  <!-- Container -->
-  <div class="container mt-5">
-    <div class="form-container rounded pt-1 pt-2">
-      <!-- <p class="h3">What are you looking for?:</p> -->
-      <a href="restraurant.html">
-        <input type="image" id="restaurant" class="restaurant icons rounded" src="assests/images/restaurant.png"
-          width="100" height="125" />
+      #facebook:hover {
+        background-color: rgb(59, 89, 152);
+        box-shadow: inset 0 0 0 22px #3a5795;
+        transform: rotate(360deg) scale(1.15);
+        transition: 1s;
+      }
+
+      #twitter:hover {
+        background-color: rgb(85, 172, 238);
+        box-shadow: inset 0 0 0 22px #3a5795;
+        transform: rotate(360deg) scale(1.15);
+        transition: 1s;
+      }
+
+      #instagram:hover {
+        background-color: rgb(221, 75, 57);
+        box-shadow: inset 0 0 0 22px #3a5795;
+        transform: rotate(360deg) scale(1.15);
+        transition: 1s;
+      }
+    </style>
+    <title>Gold Pages 2.0</title>
+  </head>
+
+  <body>
+    <!-- Weather -->
+    <div class="city"></div>
+    <div class="temp"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-light bg-light mt-4">
+      <a class="navbar-brand mx-auto" href="index.html">
+        <img
+          src="assests/images/goldpages-sansserif.png"
+          width="250"
+          height="200"
+          class="logo d-inline-block"
+          alt=""
+        />
       </a>
-      <a href="hotel.html">
-        <input type="image" id="hotel" class="hotel icons rounded" src="assests/images/hotel.png" width="100"
-          height="125" />
-      </a>
-      <a href="attractions.html">
-        <input type="image" id="attractions" class="attractions icons rounded" src="assests/images/attractions.png"
-          width="100" height="125" />
-      </a>
-      <a href="all.html">
-        <input type="image" id="all" class="all icons rounded" src="assests/images/all.png" width="100" height="125" />
-      </a>
+      <!-- Weather -->
+   <div id="response"></div>
+   <div id="icon"></div>
+   <div><img id="wicon" src="" alt="Weather icon"></div>
+   <div id="mintemp"></div>
+ </nav>
 
-    </div>
+
+    
+    <!-- Container -->
     <div class="container mt-5">
-      <div class="form-container2 rounded pt-1 pt-2">
-        <p class="h3">What are you looking for?</p>
+      <div class="form-container rounded pt-1 pt-2">
+        <!-- <p class="h3">What are you looking for?:</p> -->
+        <a href="restraurant.html">
+          <input
+            type="image"
+            id="restaurant"
+            class="restaurant icons rounded"
+            src="assests/images/restaurant.png"
+            width="100"
+            height="125"
+          />
+        </a>
+        <a href="hotel.html">
+          <input
+            type="image"
+            id="hotel"
+            class="hotel icons rounded"
+            src="assests/images/hotel.png"
+            width="100"
+            height="125"
+          />
+        </a>
+        <a href="attractions.html">
+          <input
+            type="image"
+            id="attractions"
+            class="attractions icons rounded"
+            src="assests/images/attractions.png"
+            width="100"
+            height="125"
+          />
+        </a>
+        <a href="all.html">
+          <input
+            type="image"
+            id="all"
+            class="all icons rounded"
+            src="assests/images/all.png"
+            width="100"
+            height="125"
+          />
+        </a>
       </div>
+      <div class="container mt-5">
+        <div class="form-container2 rounded pt-1 pt-2">
+          <p class="h3">What are you looking for?</p>
+        </div>
+      </div>
+
+      <div class="container mt-5">
+        <div class="info2 rounded pt-1 pt-2">
+          <p class="h5">We filter the rest so you get the best!</p>
+          <br />
+          <p class="h6">
+            GoldPages provides recommandations for establishments rated 4 stars
+            or higher. Just choose what you're looking for, and we'll show you a
+            map with the highest rated places near you.
+          </p>
+        </div>
+      </div>
+
+
+
+      <!-- Closing div for container-->
     </div>
     
-    <div class="container mt-5">
-      <div class="info2 rounded pt-1 pt-2">
-        <p class="h5">We filter the rest so you get the best!</p>
-        <br>
-        <p class="h6">GoldPages provides recommandations for establishments rated 4 stars or higher. Just choose what you're looking for, and we'll show you a map with the highest rated places near you. </p>
-
+    <div id="wrapper" class="mx-auto">
+        <div class="box" id="facebook">&#62220;</div>
+        <div class="box" id="twitter">&#62217;</div>
+        <div class="box" id="instagram">&#62253;</div>
       </div>
-    </div>
-   
-    
-    
 
-    <!-- Closing div for container-->
-  </div>
-  <!-- Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
 
-  <!-- JS -->
-  <script src="assests/javascript/app.js"></script>
-</body>
-
+    <!-- JS -->
+    <script src="assests/javascript/app.js"></script>
+    <script src="assests/javascript/weather.js"></script>
+  </body>
 </html>
