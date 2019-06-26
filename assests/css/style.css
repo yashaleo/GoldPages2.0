@@ -140,5 +140,12 @@ button, input, optgroup, select, textarea {
     transform: rotate(360deg);
     transition: 1s;
 }
+#map {
+    height: 520px;
+    width: 70%;
+    margin: 20px;
+    box-shadow: 5px 5px 5px black;
+    border: solid 1px black;
+}
 
 
