@@ -6,13 +6,15 @@
     height: 100%;
 }
 
+
+
 .form-container {
     background-color: #f6e6e675;
     width: 500px;
     box-shadow: 5px 5px 5px black;
     border: solid 1px black;
     position: fixed;
-    top: 396px;
+    top: 440px;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -24,7 +26,7 @@
     box-shadow: 5px 5px 5px black;
     border: solid 1px black;
     position: fixed;
-    top: 260px;
+    top: 292px;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -73,7 +75,9 @@
 
 .logo {
     margin-top: -60px;
+    margin-left: 329px;
 }
+
 
 .md-form {
     margin-top: 50px;
@@ -86,7 +90,7 @@ body {
     background-image: url("../images/map.jpg");
     background-size: cover;
     height: 100%;
-    margin: auto;
+    margin: -37px;
 }
 
 nav {
@@ -102,7 +106,7 @@ border-style: solid;
 }
 
 .btn {
-    background-color: #d3aa64;
+    background-color:#59421b;
 }
 .bg-light {
     background-color:#dcd1c48f!important;
@@ -140,14 +144,46 @@ button, input, optgroup, select, textarea {
     transform: rotate(360deg);
     transition: 1s;
 }
-
-
 #map {
     height: 520px;
     width: 70%;
-    margin: 20px;
+    margin: 30px;
     box-shadow: 5px 5px 5px black;
-    border: solid 1px black;
-  }
+    border: solid 5px black;
+}
+
+
+
+  element.style {
+    margin-left: 255px;
+}
+#icon{
+    margin-right:0px;
+}
+#wicon{
+    margin-right:0px
+}
+#mintemp{
+    margin-right:80px;
+}
+.hotelbody{
+    margin:0;
+    margin-top: 65px;
+}
+.allbody{
+    margin:0;
+    margin-top: 65px;
+}
+.abody{
+    margin:0;
+    margin-top: 65px;
+}
+.restraurantbody{
+    margin:0;
+    margin-top: 65px;
+}
+.modal-content{
+    background-color: #b5ab99e3;
+}
 
   
