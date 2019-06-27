@@ -11,48 +11,32 @@
   <link rel="stylesheet" href="assests/css/style.css" />
   <title>Gold Pages 2.0</title>
   <title>My Google Map</title>
-  <style>
-    #map {
-      height: 600px;
-      width: 60%;
-    }
 
-    .container {
-      background: white;
-      padding: 0;
-      margin: -600px auto;
-      width: 550px;
-      height: 600px;
-      position: relative;
-      box-shadow: 5px 5px 5px black;
-      border: solid 1px black;
-      margin-left: 950px;
-    }
-  </style>
 </head>
 
 <body>
-  <nav class="navbar navbar-light bg-light mt-4">
-    <a class="navbar-brand mx-auto" href="index.html">
-      <img src="assests/images/goldpages-sansserif.png" width="250" height="200" class="logo d-inline-block" alt="" />
-    </a>
-          <!-- Weather -->
-   <div id="response"></div>
-   <div id="icon"></div>
-   <div><img id="wicon" src="" alt="Weather icon"></div>
-   <div id="mintemp"></div>
-  </nav>
-  <br />
+  <div class="hotelbody">
+    <nav class="navbar navbar-light bg-light mt-4">
+      <a class="navbar-brand mx-auto" href="index.html">
+        <img src="assests/images/goldpages-sansserif.png" width="250" height="200" class="logo d-inline-block" alt="" />
+      </a>
+      <!-- Weather -->
+      <div id="response"></div>
+      <div id="icon"></div>
+      <div><img id="wicon" src="" alt="Weather icon"></div>
+      <div id="mintemp"></div>
+    </nav>
+    <br />
 
-  <div id="map" class="mx-auto"></div>
+    <div id="map" class="mx-auto"></div>
 
-  <!-- <div class="container  rounded pt-1 pt-2 ">
+    <!-- <div class="container  rounded pt-1 pt-2 ">
       <h3>(list of places)</h3>
     <!-- Closing div for container-->
   </div>
   <!-- Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
@@ -63,8 +47,8 @@
   <!-- JS -->
   <script src="assests/javascript/hotel.js"></script>
   <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=KEYGOESHERE&callback=initMap&libraries=places"></script>
-    <script src="assests/javascript/weather.js"></script>
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHGfJYry-spTdOv8e4JPoL_c1CO0hkoG0&callback=initMap&libraries=places"></script>
+  <script src="assests/javascript/weather.js"></script>
 
 </body>
 

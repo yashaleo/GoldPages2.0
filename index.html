@@ -20,7 +20,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
     />
-
+    
     <style>
       @import url(http://weloveiconfonts.com/api/?family=entypo);
 
@@ -28,7 +28,7 @@
         width: 350px;
         height: 50px;
         margin: 50px;
-        margin-top: -30px;
+        margin-top: 480px;
         margin-left: 630px;
     }
     .box {
@@ -37,14 +37,14 @@
         border-radius: 50px;
         border: 1px solid#f6e6e6c2;
         font-family: entypo;
-        color: #212121;
+        color: #0353b9;
         background:#f6e6e6c2;
         line-height: 50px;
         text-align: center;
         font-size: 25px;
         display: inline-block;
         cursor: pointer;
-        /* margin: 10px; */
+        margin-left: 44px;
         transition: .5s;
     }
 
@@ -79,6 +79,32 @@
   </head>
 
   <body>
+    
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">We filter the rest so you get the best!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  GoldPages provides recommandations for establishments rated 4 stars
+                  or higher. Just choose what you're looking for, and we'll show you a
+                  map with the highest rated places near you.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
     <!-- Weather -->
     <div class="city"></div>
     <div class="temp"></div>
@@ -154,7 +180,7 @@
         </div>
       </div>
 
-      <div class="container mt-5">
+      <!-- <div class="container mt-5">
         <div class="info2 rounded pt-1 pt-2">
           <p class="h5">We filter the rest so you get the best!</p>
           <br />
@@ -164,14 +190,14 @@
             map with the highest rated places near you.
           </p>
         </div>
-      </div>
+      </div> -->
 
 
 
       <!-- Closing div for container-->
     </div>
     
-    <div id="wrapper" class="mx-auto">
+    <div id="wrapper" >
         <div class="box" id="facebook">&#62220;</div>
         <div class="box" id="twitter">&#62217;</div>
         <div class="box" id="instagram">&#62253;</div>

@@ -47,3 +47,7 @@ $.ajax({
     $(".city").html(response.name);
     $(".temp").text("Temperature (F) " + response.main.temp);
   });
+
+  $(document).ready(function(){
+    $('#myModal').modal('show');
+  });
